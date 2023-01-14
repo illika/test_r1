@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { Saludo } from './Saludo';
+import Product, { Campo } from './Product';
 
-function saludo() {
-  return <h1>Hola mundo - Funcion Saludo</h1>;
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Componente2 = () => {
   return <h2>Hola mundo - Componente2 </h2>;
 }
 
-root.render(<div>
-  {saludo()}
+root.render(<>
+  {[
+    Saludo(), 
+    <Campo />
+  ]}
   <Componente2></Componente2>
-</div>);
+  <Product></Product>
+</>);
