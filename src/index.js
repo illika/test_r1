@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import { Saludo, UserCard } from './Saludo';
 import Product, { Campo } from './Product';
+import {Button} from './Button';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -11,6 +12,7 @@ const Componente2 = () => {
 }
 
 root.render(<>
+  {/*
   <UserCard 
   name="illika"
   amount={30} 
@@ -19,5 +21,9 @@ root.render(<>
   address = {{calle: 'Jr. 168', ciudad: 'Trujillo'}}
   gret={function() {alert("Hola")}}
   />
+*/}
+<Button text="Click me"></Button>
+<Button text="Pay"></Button>
+<Button text="Hola" name="illika"></Button>
 
 </>);
