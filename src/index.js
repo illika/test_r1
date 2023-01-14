@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { Saludo } from './Saludo';
+import { Saludo, UserCard } from './Saludo';
 import Product, { Campo } from './Product';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,10 +11,13 @@ const Componente2 = () => {
 }
 
 root.render(<>
-  {[
-    Saludo(), 
-    <Campo />
-  ]}
-  <Componente2></Componente2>
-  <Product></Product>
+  <UserCard 
+  name="illika"
+  amount={30} 
+  points={[1,2,3,2]}
+  estado={true}
+  address = {{calle: 'Jr. 168', ciudad: 'Trujillo'}}
+  gret={function() {alert("Hola")}}
+  />
+
 </>);
