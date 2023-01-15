@@ -8,6 +8,8 @@ import {TaskCard} from './Task';
 
 import { Welcome } from './Welcome';
 
+import { Posts } from './Posts';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Componente2 = () => {
@@ -19,8 +21,5 @@ const handleChange = (e) => {
 }
 
 root.render(<>
-  <TaskCard ready={true}></TaskCard>
-  <Welcome></Welcome>
-  <Button text="Saludar"></Button>
-  <input onChange={handleChange}></input>
+  <Posts></Posts>
 </>);
